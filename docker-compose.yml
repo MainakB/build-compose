@@ -1,13 +1,11 @@
 version: "3.8"
 services:
   nodeserver:
-    build:
-      context: ./app
+    image: kaniamu/test-service:latest
     ports:
       - "5000:5000"
   nginx:
     restart: always
-    build:
-      context: ./nginx
+    image: kaniamu/test-nginx:latest
     ports:
       - "80:80"
